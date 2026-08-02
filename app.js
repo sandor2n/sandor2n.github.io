@@ -4,6 +4,7 @@
 
 // Initial image list mapping all images in the `images` directory
 const INITIAL_IMAGES = [
+  { path: 'images/amiga/elf_amiga.png', name: 'Elf Amiga', category: 'amiga', system: 'Amiga' },
   { path: 'images/c64/delorean_c64.png', name: 'DeLorean C64', category: 'c64', system: 'C64' },
   { path: 'images/c64/seattle_c64.png', name: 'Seattle C64', category: 'c64', system: 'C64' },
   { path: 'images/c64/space_c64.png', name: 'Space C64', category: 'c64', system: 'C64' },
@@ -12,6 +13,7 @@ const INITIAL_IMAGES = [
   { path: 'images/cga/space_cga.png', name: 'Space CGA', category: 'cga', system: 'CGA' },
   { path: 'images/cga/woman.png', name: 'Woman', category: 'cga', system: 'CGA' },
   { path: 'images/ega/delorean_ega.png', name: 'DeLorean EGA', category: 'ega', system: 'EGA' },
+  { path: 'images/ega/seattle_ega.png', name: 'Seattle EGA', category: 'ega', system: 'EGA' },
   { path: 'images/ega/space_ega.png', name: 'Space EGA', category: 'ega', system: 'EGA' },
   { path: 'images/zx/dungeon_zx_1 (1).png', name: 'Dungeon ZX #1', category: 'zx', system: 'ZX Spectrum' },
   { path: 'images/zx/dungeon_zx_2.png', name: 'Dungeon ZX #2', category: 'zx', system: 'ZX Spectrum' },

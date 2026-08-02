@@ -13,6 +13,7 @@
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   
+  --accent-amiga: #50b4e6;
   --accent-c64: #7869c4;
   --accent-cga: #ff55ff;
   --accent-ega: #00aaaa;
@@ -293,6 +294,7 @@ body.pixelated .modal-image {
   z-index: 2;
 }
 
+.sys-amiga { background: rgba(80, 180, 230, 0.85); color: #fff; }
 .sys-c64 { background: rgba(120, 105, 196, 0.85); color: #fff; }
 .sys-cga { background: rgba(255, 85, 255, 0.85); color: #000; }
 .sys-ega { background: rgba(0, 170, 170, 0.85); color: #fff; }
@@ -434,6 +436,7 @@ body.pixelated .modal-image {
 .modal-close {
   top: -15px;
   right: -15px;
+}
 
 .modal-prev {
   left: -60px;
