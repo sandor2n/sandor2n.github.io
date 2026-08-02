@@ -4,10 +4,16 @@
 
 // Initial image list mapping all images in the `images` directory
 const INITIAL_IMAGES = [
-  { path: 'images/amiga/elf_amiga.png', name: 'Elf Amiga', category: 'amiga', system: 'Amiga' },
+  { path: 'images/amiga/elf_amiga.png', name: 'Elf', category: 'amiga', system: 'Amiga' },
+  { path: 'images/amiga/female_knight_amiga.png', name: 'Female knight', category: 'amiga', system: 'Amiga' },
+  { path: 'images/amiga/monster_amiga.png', name: 'Monster', category: 'amiga', system: 'Amiga' },
+  { path: 'images/amiga/orc2_amiga.png', name: 'Orc 2', category: 'amiga', system: 'Amiga' },
+  { path: 'images/amiga/orc_amiga.png', name: 'Orc', category: 'amiga', system: 'Amiga' },
   { path: 'images/c64/delorean_c64.png', name: 'DeLorean C64', category: 'c64', system: 'C64' },
   { path: 'images/c64/seattle_c64.png', name: 'Seattle C64', category: 'c64', system: 'C64' },
+  { path: 'images/c64/orc_c64.png', name: 'Orc', category: 'c64', system: 'C64' },
   { path: 'images/c64/space_c64.png', name: 'Space C64', category: 'c64', system: 'C64' },
+  { path: 'images/c64/monster_c64_2.png', name: 'Monster', category: 'c64', system: 'C64' },
   { path: 'images/cga/delorean_cga.png', name: 'DeLorean CGA', category: 'cga', system: 'CGA' },
   { path: 'images/cga/parrot_cga.png', name: 'Parrot CGA', category: 'cga', system: 'CGA' },
   { path: 'images/cga/space_cga.png', name: 'Space CGA', category: 'cga', system: 'CGA' },
