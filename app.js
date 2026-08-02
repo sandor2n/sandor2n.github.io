@@ -18,6 +18,7 @@ const INITIAL_IMAGES = [
   { path: 'images/cga/parrot_cga.png', name: 'Parrot CGA', category: 'cga', system: 'CGA' },
   { path: 'images/cga/space_cga.png', name: 'Space CGA', category: 'cga', system: 'CGA' },
   { path: 'images/cga/woman.png', name: 'Woman', category: 'cga', system: 'CGA' },
+  { path: 'images/vga/female_knight_vga.png', name: 'Female knight', category: 'vga', system: 'VGA' },
   { path: 'images/ega/delorean_ega.png', name: 'DeLorean EGA', category: 'ega', system: 'EGA' },
   { path: 'images/ega/seattle_ega.png', name: 'Seattle EGA', category: 'ega', system: 'EGA' },
   { path: 'images/ega/space_ega.png', name: 'Space EGA', category: 'ega', system: 'EGA' },
