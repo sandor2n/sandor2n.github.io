@@ -9,6 +9,8 @@ const INITIAL_IMAGES = [
   { path: 'images/amiga/monster_amiga.png', name: 'Monster', category: 'amiga', system: 'Amiga' },
   { path: 'images/amiga/orc2_amiga.png', name: 'Orc 2', category: 'amiga', system: 'Amiga' },
   { path: 'images/amiga/orc_amiga.png', name: 'Orc', category: 'amiga', system: 'Amiga' },
+  { path: 'images/amiga/victoria_harbor_amiga.png', name: 'Victoria Harbor', category: 'amiga', system: 'Amiga' },
+  { path: 'images/c64/victoria_harbor_c64.png', name: 'Victoria Harbor', category: 'c64', system: 'C64' },
   { path: 'images/c64/delorean_c64.png', name: 'DeLorean C64', category: 'c64', system: 'C64' },
   { path: 'images/c64/seattle_c64.png', name: 'Seattle C64', category: 'c64', system: 'C64' },
   { path: 'images/c64/orc_c64.png', name: 'Orc', category: 'c64', system: 'C64' },
