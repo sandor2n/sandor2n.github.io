@@ -4,12 +4,14 @@
 
 // Initial image list mapping all images in the `images` directory
 const INITIAL_IMAGES = [
+  { path: 'images/amiga/robocop_amiga.png', name: 'Robocop', category: 'amiga', system: 'Amiga' },
   { path: 'images/amiga/elf_amiga.png', name: 'Elf', category: 'amiga', system: 'Amiga' },
   { path: 'images/amiga/female_knight_amiga.png', name: 'Female knight', category: 'amiga', system: 'Amiga' },
   { path: 'images/amiga/monster_amiga.png', name: 'Monster', category: 'amiga', system: 'Amiga' },
   { path: 'images/amiga/orc2_amiga.png', name: 'Orc 2', category: 'amiga', system: 'Amiga' },
   { path: 'images/amiga/orc_amiga.png', name: 'Orc', category: 'amiga', system: 'Amiga' },
   { path: 'images/amiga/victoria_harbor_amiga.png', name: 'Victoria Harbor', category: 'amiga', system: 'Amiga' },
+  { path: 'images/c64/robocop_c64.png', name: 'Robocop', category: 'c64', system: 'C64' },
   { path: 'images/c64/victoria_harbor_c64.png', name: 'Victoria Harbor', category: 'c64', system: 'C64' },
   { path: 'images/c64/delorean_c64.png', name: 'DeLorean C64', category: 'c64', system: 'C64' },
   { path: 'images/c64/seattle_c64.png', name: 'Seattle C64', category: 'c64', system: 'C64' },
@@ -17,10 +19,12 @@ const INITIAL_IMAGES = [
   { path: 'images/c64/space_c64.png', name: 'Space C64', category: 'c64', system: 'C64' },
   { path: 'images/c64/monster_c64_2.png', name: 'Monster', category: 'c64', system: 'C64' },
   { path: 'images/cga/delorean_cga.png', name: 'DeLorean CGA', category: 'cga', system: 'CGA' },
+  { path: 'images/cga/robocop_cga.png', name: 'Robocop', category: 'cga', system: 'CGA' },
   { path: 'images/cga/parrot_cga.png', name: 'Parrot CGA', category: 'cga', system: 'CGA' },
   { path: 'images/cga/space_cga.png', name: 'Space CGA', category: 'cga', system: 'CGA' },
   { path: 'images/cga/woman.png', name: 'Woman', category: 'cga', system: 'CGA' },
   { path: 'images/vga/female_knight_vga.png', name: 'Female knight', category: 'vga', system: 'VGA' },
+  { path: 'images/ega/robocop_ega.png', name: 'Robocop', category: 'ega', system: 'EGA' },
   { path: 'images/ega/delorean_ega.png', name: 'DeLorean EGA', category: 'ega', system: 'EGA' },
   { path: 'images/ega/seattle_ega.png', name: 'Seattle EGA', category: 'ega', system: 'EGA' },
   { path: 'images/ega/space_ega.png', name: 'Space EGA', category: 'ega', system: 'EGA' },
