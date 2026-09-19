@@ -389,11 +389,6 @@ body.pixelated .modal-image {
   max-height: 70vh;
   object-fit: contain;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
-  transform-origin: center center;
-}
-
-.modal-image-container.zoomed {
-  cursor: grab;
 }
 
 .modal-image-container.zoomed .modal-image {
@@ -487,6 +482,11 @@ body.pixelated .modal-image {
 .modal-next {
   right: -60px;
   top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-prev:hover,
+.modal-next:hover {
   transform: translateY(-50%);
 }
 

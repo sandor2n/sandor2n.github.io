@@ -214,8 +214,15 @@ class GalleryApp {
 
   setZoom(level) {
     this.zoomLevel = level;
-    this.modalImg.style.transform = `scale(${level})`;
     this.modalImageContainer.classList.toggle('zoomed', level > 1);
+
+    if (level === 1) {
+      this.modalImg.style.width = '';
+      this.modalImg.style.height = '';
+    } else if (this.modalImg.naturalWidth) {
+      this.modalImg.style.width = `${this.modalImg.naturalWidth * level}px`;
+      this.modalImg.style.height = `${this.modalImg.naturalHeight * level}px`;
+    }
 
     this.zoomControls.querySelectorAll('.zoom-btn').forEach(btn => {
       btn.classList.toggle('active', parseInt(btn.dataset.zoom, 10) === level);
@@ -227,6 +234,7 @@ class GalleryApp {
     const imgData = this.filteredImages[this.currentIndex];
     if (!imgData) return;
 
+    this.modalImg.onload = () => this.setZoom(this.zoomLevel);
     this.setZoom(1);
     this.modalImg.src = imgData.path;
     this.modalImg.alt = imgData.name;
