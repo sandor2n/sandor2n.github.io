@@ -56,6 +56,7 @@ class GalleryApp {
     this.searchQuery = '';
     this.currentIndex = 0;
     this.pixelated = true;
+    this.zoomLevel = 1;
 
     this.initElements();
     this.initEventListeners();
@@ -80,6 +81,8 @@ class GalleryApp {
     this.modalPrevBtn = document.getElementById('modalPrev');
     this.modalNextBtn = document.getElementById('modalNext');
     this.modalDownloadBtn = document.getElementById('modalDownload');
+    this.modalImageContainer = document.getElementById('modalImageContainer');
+    this.zoomControls = document.getElementById('zoomControls');
   }
 
   initEventListeners() {
@@ -124,6 +127,13 @@ class GalleryApp {
     this.modalCloseBtn.addEventListener('click', () => this.closeModal());
     this.modalPrevBtn.addEventListener('click', () => this.navigateModal(-1));
     this.modalNextBtn.addEventListener('click', () => this.navigateModal(1));
+
+    // Zoom Controls
+    this.zoomControls.addEventListener('click', (e) => {
+      const btn = e.target.closest('.zoom-btn');
+      if (!btn) return;
+      this.setZoom(parseInt(btn.dataset.zoom, 10));
+    });
 
     this.modal.addEventListener('click', (e) => {
       if (e.target === this.modal) this.closeModal();
@@ -202,11 +212,22 @@ class GalleryApp {
     });
   }
 
+  setZoom(level) {
+    this.zoomLevel = level;
+    this.modalImg.style.transform = `scale(${level})`;
+    this.modalImageContainer.classList.toggle('zoomed', level > 1);
+
+    this.zoomControls.querySelectorAll('.zoom-btn').forEach(btn => {
+      btn.classList.toggle('active', parseInt(btn.dataset.zoom, 10) === level);
+    });
+  }
+
   openModal(index) {
     this.currentIndex = index;
     const imgData = this.filteredImages[this.currentIndex];
     if (!imgData) return;
 
+    this.setZoom(1);
     this.modalImg.src = imgData.path;
     this.modalImg.alt = imgData.name;
     this.modalTitle.textContent = imgData.name;

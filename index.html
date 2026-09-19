@@ -120,7 +120,7 @@
         </svg>
       </button>
 
-      <div class="modal-image-container">
+      <div class="modal-image-container" id="modalImageContainer">
         <img src="" alt="" class="modal-image" id="modalImage">
       </div>
 
@@ -129,6 +129,11 @@
         <div class="modal-meta">
           <span class="sys-tag" id="modalSystem">System</span>
           <span id="modalPath">path/to/image.png</span>
+          <div class="zoom-controls" id="zoomControls">
+            <button class="zoom-btn active" data-zoom="1" title="1x zoom">1x</button>
+            <button class="zoom-btn" data-zoom="2" title="2x zoom">2x</button>
+            <button class="zoom-btn" data-zoom="4" title="4x zoom">4x</button>
+          </div>
           <a id="modalDownload" href="#" download class="control-btn" style="padding: 0.25rem 0.6rem; font-size: 0.8rem; text-decoration: none; display: inline-flex; gap: 0.3rem; align-items: center;" title="Download image">
             <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
