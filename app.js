@@ -229,13 +229,14 @@ class GalleryApp {
     });
   }
 
-  openModal(index) {
+  openModal(index, resetZoom = true) {
     this.currentIndex = index;
     const imgData = this.filteredImages[this.currentIndex];
     if (!imgData) return;
 
+    if (resetZoom) this.zoomLevel = 1;
     this.modalImg.onload = () => this.setZoom(this.zoomLevel);
-    this.setZoom(1);
+    this.setZoom(this.zoomLevel);
     this.modalImg.src = imgData.path;
     this.modalImg.alt = imgData.name;
     this.modalTitle.textContent = imgData.name;
@@ -261,7 +262,7 @@ class GalleryApp {
   navigateModal(direction) {
     if (this.filteredImages.length === 0) return;
     this.currentIndex = (this.currentIndex + direction + this.filteredImages.length) % this.filteredImages.length;
-    this.openModal(this.currentIndex);
+    this.openModal(this.currentIndex, false);
   }
 }
 
