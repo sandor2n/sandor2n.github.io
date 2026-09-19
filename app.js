@@ -2,40 +2,50 @@
  * Pixel Art Gallery App
  */
 
+// Maps each category key to its display name
+const SYSTEM_NAMES = {
+  amiga: 'Amiga',
+  c64: 'C64',
+  cga: 'CGA',
+  vga: 'VGA',
+  ega: 'EGA',
+  zx: 'ZX Spectrum'
+};
+
 // Initial image list mapping all images in the `images` directory
 const INITIAL_IMAGES = [
-  { path: 'images/amiga/terminator_amiga.png', name: 'Terminator', category: 'amiga', system: 'Amiga' },
-  { path: 'images/amiga/robocop_amiga.png', name: 'Robocop', category: 'amiga', system: 'Amiga' },
-  { path: 'images/amiga/elf_amiga.png', name: 'Elf', category: 'amiga', system: 'Amiga' },
-  { path: 'images/amiga/female_knight_amiga.png', name: 'Female knight', category: 'amiga', system: 'Amiga' },
-  { path: 'images/amiga/monster_amiga.png', name: 'Monster', category: 'amiga', system: 'Amiga' },
-  { path: 'images/amiga/orc2_amiga.png', name: 'Orc 2', category: 'amiga', system: 'Amiga' },
-  { path: 'images/amiga/orc_amiga.png', name: 'Orc', category: 'amiga', system: 'Amiga' },
-  { path: 'images/amiga/victoria_harbor_amiga.png', name: 'Victoria Harbor', category: 'amiga', system: 'Amiga' },
-  { path: 'images/c64/terminator_c64.png', name: 'Terminator', category: 'c64', system: 'C64' },
-  { path: 'images/c64/robocop_c64.png', name: 'Robocop', category: 'c64', system: 'C64' },
-  { path: 'images/c64/victoria_harbor_c64.png', name: 'Victoria Harbor', category: 'c64', system: 'C64' },
-  { path: 'images/c64/delorean_c64.png', name: 'DeLorean C64', category: 'c64', system: 'C64' },
-  { path: 'images/c64/seattle_c64.png', name: 'Seattle C64', category: 'c64', system: 'C64' },
-  { path: 'images/c64/orc_c64.png', name: 'Orc', category: 'c64', system: 'C64' },
-  { path: 'images/c64/space_c64.png', name: 'Space C64', category: 'c64', system: 'C64' },
-  { path: 'images/c64/monster_c64_2.png', name: 'Monster', category: 'c64', system: 'C64' },
-  { path: 'images/cga/terminator_cga.png', name: 'Terminator', category: 'cga', system: 'CGA' },
-  { path: 'images/cga/delorean_cga.png', name: 'DeLorean', category: 'cga', system: 'CGA' },
-  { path: 'images/cga/robocop_cga.png', name: 'Robocop', category: 'cga', system: 'CGA' },
-  { path: 'images/cga/parrot_cga.png', name: 'Parrot', category: 'cga', system: 'CGA' },
-  { path: 'images/cga/space_cga.png', name: 'Space CGA', category: 'cga', system: 'CGA' },
-  { path: 'images/cga/woman.png', name: 'Woman', category: 'cga', system: 'CGA' },
-  { path: 'images/vga/female_knight_vga.png', name: 'Female knight', category: 'vga', system: 'VGA' },
-  { path: 'images/ega/terminator_ega.png', name: 'Terminator', category: 'ega', system: 'EGA' },
-  { path: 'images/ega/robocop_ega.png', name: 'Robocop', category: 'ega', system: 'EGA' },
-  { path: 'images/ega/delorean_ega.png', name: 'DeLorean EGA', category: 'ega', system: 'EGA' },
-  { path: 'images/ega/seattle_ega.png', name: 'Seattle EGA', category: 'ega', system: 'EGA' },
-  { path: 'images/ega/space_ega.png', name: 'Space EGA', category: 'ega', system: 'EGA' },
-  { path: 'images/zx/terminator_zx.png', name: 'Terminator', category: 'zx', system: 'ZX Spectrum' },
-  { path: 'images/zx/dungeon_zx_1 (1).png', name: 'Dungeon ZX #1', category: 'zx', system: 'ZX Spectrum' },
-  { path: 'images/zx/dungeon_zx_2.png', name: 'Dungeon ZX #2', category: 'zx', system: 'ZX Spectrum' },
-  { path: 'images/zx/dungeon_zx_3.png', name: 'Dungeon ZX #3', category: 'zx', system: 'ZX Spectrum' }
+  { path: 'images/amiga/terminator_amiga.png', name: 'Terminator', category: 'amiga' },
+  { path: 'images/amiga/robocop_amiga.png', name: 'Robocop', category: 'amiga' },
+  { path: 'images/amiga/elf_amiga.png', name: 'Elf', category: 'amiga' },
+  { path: 'images/amiga/female_knight_amiga.png', name: 'Female knight', category: 'amiga' },
+  { path: 'images/amiga/monster_amiga.png', name: 'Monster', category: 'amiga' },
+  { path: 'images/amiga/orc2_amiga.png', name: 'Orc 2', category: 'amiga' },
+  { path: 'images/amiga/orc_amiga.png', name: 'Orc', category: 'amiga' },
+  { path: 'images/amiga/victoria_harbor_amiga.png', name: 'Victoria Harbor', category: 'amiga' },
+  { path: 'images/c64/terminator_c64.png', name: 'Terminator', category: 'c64' },
+  { path: 'images/c64/robocop_c64.png', name: 'Robocop', category: 'c64' },
+  { path: 'images/c64/victoria_harbor_c64.png', name: 'Victoria Harbor', category: 'c64' },
+  { path: 'images/c64/delorean_c64.png', name: 'DeLorean C64', category: 'c64' },
+  { path: 'images/c64/seattle_c64.png', name: 'Seattle C64', category: 'c64' },
+  { path: 'images/c64/orc_c64.png', name: 'Orc', category: 'c64' },
+  { path: 'images/c64/space_c64.png', name: 'Space C64', category: 'c64' },
+  { path: 'images/c64/monster_c64_2.png', name: 'Monster', category: 'c64' },
+  { path: 'images/cga/terminator_cga.png', name: 'Terminator', category: 'cga' },
+  { path: 'images/cga/delorean_cga.png', name: 'DeLorean', category: 'cga' },
+  { path: 'images/cga/robocop_cga.png', name: 'Robocop', category: 'cga' },
+  { path: 'images/cga/parrot_cga.png', name: 'Parrot', category: 'cga' },
+  { path: 'images/cga/space_cga.png', name: 'Space CGA', category: 'cga' },
+  { path: 'images/cga/woman.png', name: 'Woman', category: 'cga' },
+  { path: 'images/vga/female_knight_vga.png', name: 'Female knight', category: 'vga' },
+  { path: 'images/ega/terminator_ega.png', name: 'Terminator', category: 'ega' },
+  { path: 'images/ega/robocop_ega.png', name: 'Robocop', category: 'ega' },
+  { path: 'images/ega/delorean_ega.png', name: 'DeLorean EGA', category: 'ega' },
+  { path: 'images/ega/seattle_ega.png', name: 'Seattle EGA', category: 'ega' },
+  { path: 'images/ega/space_ega.png', name: 'Space EGA', category: 'ega' },
+  { path: 'images/zx/terminator_zx.png', name: 'Terminator', category: 'zx' },
+  { path: 'images/zx/dungeon_zx_1 (1).png', name: 'Dungeon ZX #1', category: 'zx' },
+  { path: 'images/zx/dungeon_zx_2.png', name: 'Dungeon ZX #2', category: 'zx' },
+  { path: 'images/zx/dungeon_zx_3.png', name: 'Dungeon ZX #3', category: 'zx' }
 ];
 
 class GalleryApp {
@@ -144,7 +154,7 @@ class GalleryApp {
       const matchesCategory = (this.currentCategory === 'all') || (img.category === this.currentCategory);
       const matchesSearch = !this.searchQuery || 
         img.name.toLowerCase().includes(this.searchQuery) ||
-        img.system.toLowerCase().includes(this.searchQuery) ||
+        SYSTEM_NAMES[img.category].toLowerCase().includes(this.searchQuery) ||
         img.path.toLowerCase().includes(this.searchQuery);
 
       return matchesCategory && matchesSearch;
@@ -172,7 +182,7 @@ class GalleryApp {
       return `
         <article class="tile-card" data-index="${index}">
           <div class="tile-image-wrapper">
-            <span class="sys-tag sys-${img.category}">${img.system}</span>
+            <span class="sys-tag sys-${img.category}">${SYSTEM_NAMES[img.category]}</span>
             <img class="tile-image" src="${img.path}" alt="${img.name}" loading="lazy">
           </div>
           <div class="tile-info">
@@ -201,7 +211,7 @@ class GalleryApp {
     this.modalImg.alt = imgData.name;
     this.modalTitle.textContent = imgData.name;
     
-    this.modalSystem.textContent = imgData.system;
+    this.modalSystem.textContent = SYSTEM_NAMES[imgData.category];
     this.modalSystem.className = `sys-tag sys-${imgData.category}`;
     this.modalPath.textContent = imgData.path;
     
