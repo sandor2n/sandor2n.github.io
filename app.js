@@ -12,6 +12,8 @@ const SYSTEM_NAMES = {
   zx: 'ZX Spectrum'
 };
 
+statue_c64_MC_sprites.png
+
 // Initial image list mapping all images in the `images` directory
 const INITIAL_IMAGES = [
   { path: 'images/amiga/terminator_amiga.png', name: 'Terminator', category: 'amiga' },
@@ -22,6 +24,7 @@ const INITIAL_IMAGES = [
   { path: 'images/amiga/orc2_amiga.png', name: 'Orc 2', category: 'amiga' },
   { path: 'images/amiga/orc_amiga.png', name: 'Orc', category: 'amiga' },
   { path: 'images/amiga/victoria_harbor_amiga.png', name: 'Victoria Harbor', category: 'amiga' },
+  { path: 'images/c64/statue_c64_MC_sprites.png', name: 'Statue', category: 'c64' },
   { path: 'images/c64/mulholland_dr_c64_MC_sprites.png', name: 'Mulholland Dr', category: 'c64' },
   { path: 'images/c64/terminator_c64.png', name: 'Terminator', category: 'c64' },
   { path: 'images/c64/robocop_c64.png', name: 'Robocop', category: 'c64' },
