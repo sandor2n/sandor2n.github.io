@@ -33,7 +33,6 @@ const INITIAL_IMAGES = [
   { path: 'images/c64/space_c64.png', name: 'Space C64', category: 'c64' },
   { path: 'images/c64/monster_c64_2.png', name: 'Monster', category: 'c64' },
   { path: 'images/cga/terminator_cga_v3.png', name: 'Terminator V3', category: 'cga' },
-  { path: 'images/cga/terminator_cga_v2.png', name: 'Terminator V2', category: 'cga' },
   { path: 'images/cga/terminator_cga.png', name: 'Terminator', category: 'cga' },
   { path: 'images/cga/delorean_cga.png', name: 'DeLorean', category: 'cga' },
   { path: 'images/cga/robocop_cga.png', name: 'Robocop', category: 'cga' },
