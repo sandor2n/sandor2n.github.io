@@ -12,8 +12,6 @@ const SYSTEM_NAMES = {
   zx: 'ZX Spectrum'
 };
 
-statue_c64_MC_sprites.png
-
 // Initial image list mapping all images in the `images` directory
 const INITIAL_IMAGES = [
   { path: 'images/amiga/terminator_amiga.png', name: 'Terminator', category: 'amiga' },
