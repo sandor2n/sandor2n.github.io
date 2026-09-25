@@ -25,6 +25,7 @@ const INITIAL_IMAGES = [
   { path: 'images/c64/lightning_pattern_c64.png', name: 'Lightning pattern', category: 'c64' },
   { path: 'images/c64/statue_c64_MC_sprites.png', name: 'Statue', category: 'c64' },
   { path: 'images/c64/mulholland_dr_c64_MC_sprites.png', name: 'Mulholland Dr', category: 'c64' },
+  { path: 'images/c64/terminator_mc_fli.png', name: 'Terminator FLI', category: 'c64' },
   { path: 'images/c64/terminator_c64.png', name: 'Terminator', category: 'c64' },
   { path: 'images/c64/robocop_c64.png', name: 'Robocop', category: 'c64' },
   { path: 'images/c64/victoria_harbor_c64.png', name: 'Victoria Harbor', category: 'c64' },
